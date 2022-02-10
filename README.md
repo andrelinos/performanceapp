@@ -26,9 +26,9 @@
 
 <!-- Status -->
 
-<!-- <h4 align="center"> 
+<!-- <h4 align="center">
 	🚧  Performanceapp 🚀 Under construction...  🚧
-</h4> 
+</h4>
 
 <hr> -->
 
@@ -90,7 +90,7 @@ $ yarn start
 
 This project is under license from MIT. For more details, see the [LICENSE](LICENSE.md) file.
 
-Made with :heart: by <a href="https://github.com/andrelinos" target="_blank">{{YOUR_NAME}}</a>
+Made with :heart: by <a href="https://github.com/andrelinos" target="_blank">Andrelino Silva</a>
 
 &#xa0;
 
