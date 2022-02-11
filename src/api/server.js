@@ -5,9 +5,10 @@ module.exports = () => {
 
     for (let index = 0; index < 500; index++) {
         data.friends.push({
-            in: index + 1,
-            likes: 5,
-            Name: `Friend ${index + 1}`,
+            id: index + 1,
+            likes: Math.floor(Math.random() * 5000 + 1),
+            name: `Friend ${index + 1}`,
         });
     }
+    return data;
 };

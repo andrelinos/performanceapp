@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text } from 'react-native';
+import { Text, StyleSheet } from 'react-native';
 
 interface ItemProps {
     data: {
@@ -10,8 +10,14 @@ interface ItemProps {
 
 export function Friend({ data }: ItemProps) {
     return (
-        <Text>
+        <Text style={styles.text}>
             {data.name} - Likes: {data.likes}
         </Text>
     );
 }
+
+const styles = StyleSheet.create({
+    text: {
+        color: '#bdc3c7',
+    },
+});

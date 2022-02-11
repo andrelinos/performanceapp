@@ -1,5 +1,5 @@
 <div align="center" id="top">
-  <img src="./.github/app.gif" alt="Performanceapp" />
+  <img src="./prtscn/print.png" alt="Performanceapp" />
 
   &#xa0;
 
