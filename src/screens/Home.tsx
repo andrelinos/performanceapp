@@ -55,11 +55,13 @@ const styles = StyleSheet.create({
         padding: 25,
         backgroundColor: '#2c3e50',
     },
+
     title: {
         fontSize: 18,
         fontWeight: 'bold',
         color: '#ecf0f1',
     },
+
     textInput: {
         borderWidth: 1,
         padding: 7,
@@ -69,6 +71,7 @@ const styles = StyleSheet.create({
         borderColor: '#ecf0f1',
         borderRadius: 5,
     },
+
     list: {
         marginTop: 24,
         marginBottom: 24,
