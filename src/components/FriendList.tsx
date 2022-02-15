@@ -9,12 +9,12 @@ interface FriendProps {
         name: string;
         likes: number;
     }[];
+
+    follow: () => void;
 }
 
-export function FriendList({ data }: FriendProps) {
+export function FriendList({ data, follow }: FriendProps) {
     const totalLikes = useMemo(() => {
-        // likes = acumulador
-        // friend = de onde vai pegar os valores para memorizar
         return data.reduce((likes, friend) => {
             return likes + friend.likes;
         }, 0);
@@ -24,7 +24,7 @@ export function FriendList({ data }: FriendProps) {
         <View>
             <Text>Total de likes: {totalLikes}</Text>
             {data.map((friend) => (
-                <Friend key={String(friend.id)} data={friend} />
+                <Friend key={String(friend.id)} data={friend} follow={follow} />
             ))}
         </View>
     );

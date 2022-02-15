@@ -1,5 +1,5 @@
 import React, { memo } from 'react';
-import { Text, StyleSheet } from 'react-native';
+import { Text, StyleSheet, TouchableOpacity, View } from 'react-native';
 
 interface ItemProps {
     data: {
@@ -7,13 +7,19 @@ interface ItemProps {
         name: string;
         likes: number;
     };
+    follow: () => void;
 }
 
-function FriendComponent({ data }: ItemProps) {
+function FriendComponent({ data, follow }: ItemProps) {
     return (
-        <Text style={styles.text}>
-            {data.name} - Likes: {data.likes}
-        </Text>
+        <View style={{ marginBottom: 15, flexDirection: 'row' }}>
+            <Text style={styles.text}>
+                {data.name} - Likes: {data.likes}
+            </Text>
+            <TouchableOpacity onPress={follow} style={{ marginLeft: 10 }}>
+                <Text>Seguir {data.name}</Text>
+            </TouchableOpacity>
+        </View>
     );
 }
 
