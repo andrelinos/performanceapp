@@ -6,6 +6,7 @@ interface ItemProps {
         id: number;
         name: string;
         likes: number;
+        online: string;
     };
     follow: () => void;
 }
@@ -19,9 +20,7 @@ function FriendComponent({ data, follow }: ItemProps) {
             <TouchableOpacity onPress={follow}>
                 <Text style={{ color: 'purple' }}>Seguir {data.name}</Text>
             </TouchableOpacity>
-            <Text>
-                Online em {new Date().getHours()} : {new Date().getMinutes()}
-            </Text>
+            <Text>Online em: {data.online}</Text>
         </View>
     );
 }

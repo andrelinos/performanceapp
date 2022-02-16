@@ -33,7 +33,7 @@ export function Home() {
                 id: item.id,
                 name: item.name,
                 likes: item.likes,
-                online: `${new Date()}:${new Date().getMinutes()}`,
+                online: `${new Date().getHours()}:${new Date().getMinutes()}`,
             };
         });
 
