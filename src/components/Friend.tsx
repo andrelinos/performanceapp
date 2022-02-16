@@ -12,13 +12,16 @@ interface ItemProps {
 
 function FriendComponent({ data, follow }: ItemProps) {
     return (
-        <View style={{ marginBottom: 15, flexDirection: 'row' }}>
+        <View style={{ marginBottom: 15 }}>
             <Text style={styles.text}>
                 {data.name} - Likes: {data.likes}
             </Text>
-            <TouchableOpacity onPress={follow} style={{ marginLeft: 10 }}>
-                <Text>Seguir {data.name}</Text>
+            <TouchableOpacity onPress={follow}>
+                <Text style={{ color: 'purple' }}>Seguir {data.name}</Text>
             </TouchableOpacity>
+            <Text>
+                Online em {new Date().getHours()} : {new Date().getMinutes()}
+            </Text>
         </View>
     );
 }

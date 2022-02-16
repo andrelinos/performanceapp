@@ -12,8 +12,8 @@ import { FriendList } from '../components/FriendList';
 
 interface FriendsProps {
     id: number;
+    name: string;
     likes: number;
-    Name: string;
 }
 [];
 
@@ -28,7 +28,16 @@ export function Home() {
 
         const data = await response.json();
 
-        setFriends(data);
+        const formattedData = data.map((item: FriendsProps) => {
+            return {
+                id: item.id,
+                name: item.name,
+                likes: item.likes,
+                online: `${new Date()}:${new Date().getMinutes()}`,
+            };
+        });
+
+        setFriends(formattedData);
     }
 
     const handleFollow = useCallback(() => {
