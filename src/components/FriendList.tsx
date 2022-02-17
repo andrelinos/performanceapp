@@ -1,5 +1,5 @@
 import React, { useMemo } from 'react';
-import { View, Text } from 'react-native';
+import { View, Text, FlatList } from 'react-native';
 
 import { Friend } from './Friend';
 
@@ -24,9 +24,13 @@ export function FriendList({ data, follow }: FriendProps) {
     return (
         <View>
             <Text>Total de likes: {totalLikes}</Text>
-            {data.map((friend) => (
-                <Friend key={String(friend.id)} data={friend} follow={follow} />
-            ))}
+            <FlatList
+                data={data}
+                keyExtractor={(item) => String(item.id)}
+                renderItem={({ item }) => (
+                    <Friend data={item} follow={follow} />
+                )}
+            />
         </View>
     );
 }
